@@ -3,17 +3,7 @@
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<style type="text/css">
-	body{
-		background-color: lightgrey;
-	}
-	nav {
-		background-color: black;
-	}
-    img {
-    height: 50px;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 
 <title>Testing </title>
 </head>
@@ -29,13 +19,30 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item active">
+      <li class="nav-item">
         <a href="index.html" class="nav-link" href="#">Home </a>
       </li>
       <li class="nav-item">
         <a href="demo.html" class="nav-link" href="#">Demo</a>
       </li>
-<!--       <li class="nav-item dropdown">
+
+       <li class="nav-item">
+        <a href="pricing.html" class="nav-link" href="#">Pricing</a>
+      </li>
+      </li>
+      <li class="nav-item active">
+        <a href="feedback.html" class="nav-link" href="#">Feedback <span class="sr-only"></span></a>
+      </li>
+
+      <li class="nav-item">
+        <a href="about.html"class="nav-link" href="#">About</a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="support.html"class="nav-link" href="#">Support</a>
+      </li>
+    </ul>
+    <!--       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
         </a> -->
@@ -46,23 +53,42 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div> --> 
-       <li class="nav-item">
-        <a href="pricing.html" class="nav-link" href="#">Pricing</a>
-      </li>
-      </li>
-      <li class="nav-item">
-        <a href="feedback.html" class="nav-link" href="#">Feedback <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
 <!--     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form> -->
   </div>
 </nav>
-<h1 style="text-align: center;"> Feedback </h1>
+<h1 style="text-align: center;"> Send Us Your Feedback! </h1>
 
-<br><br><br>
-<p style="text-align: center;"> On this part of the page we will have a way for users to leave feedback on the software, or any suggestions they have.</p>
+<br><br>
+<div id="feedform">
+<form action="submission.php" method="post" id="form">
+<label>Name:</label>
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; are individual spaces 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+<br>
+<input type="text" name="Name" class="inputbox">
+<br>
+<br>
+<label>Email:</label>
+<br>
+<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+<input type="text" name="email" class="inputbox">
+<br>
+<br>
+<label>Comments:</label>
+<br><!--
+<input type="text" name="comments" id="commentbox">
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+<textarea id="commentbox" placeholder="Enter up to 150 words..."name="comments" rows="4" cols="35"></textarea> 
+<br>
+<div id="submit">
+<input type="submit" value="Submit" name="submit" >
+</div>
+</form>
+</div>
 </body>
 </html>
